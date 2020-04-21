@@ -12,7 +12,7 @@ func main() {
 	x = 0.5
 	y = 1
 	r = 0.2
-	if (x*x + y*y) > r {
+	if (x*x + y*y) > r*r {
 		fmt.Printf("Tochka s coordinatami x = %f, y = %f - ne popadaet v krug s radiusom %f", x, y, r)
 	} else {
 		fmt.Printf("Tochka s coordinatami x = %f, y = %f - popadaet v krug s radiusom %f", x, y, r)
