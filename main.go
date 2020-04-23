@@ -39,7 +39,7 @@ func main() {
 		if err == nil {
 			break
 		} else {
-			fmt.Println("НЕкорректное значение")
+			fmt.Println("Некорректное значение")
 		}
 	}
 	for {
@@ -47,20 +47,20 @@ func main() {
 		if err == nil {
 			break
 		} else {
-			fmt.Println("НЕкорректное значение")
+			fmt.Println("Некорректное значение")
 		}
 	}
 	for {
-		r, err = readFloat("Введитe radius R:")
+		r, err = readFloat("Введитe радиус R:")
 		if err == nil {
 			break
 		} else {
-			fmt.Println("НЕкорректное значение")
+			fmt.Println("Некорректное значение")
 		}
 	}
 	if beBelong(x, y, r) == false {
-		fmt.Printf("Tochka s coordinatami x = %f, y = %f - ne popadaet v krug s radiusom %f\n", x, y, r)
+		fmt.Printf("Точка с координатами X = %f, Y = %f - не попадает в круг с радиусом %f\n", x, y, r)
 	} else {
-		fmt.Printf("Tochka s coordinatami x = %f, y = %f - popadaet v krug s radiusom %f\n", x, y, r)
+		fmt.Printf("Точка с координатами X = %f, Y = %f - попадает в круг с радиусом %f\n", x, y, r)
 	}
 }
