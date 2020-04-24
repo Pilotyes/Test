@@ -34,28 +34,21 @@ func readFloat(str string) (float64, error) {
 func main() {
 	var x, y, r float64
 	var err error
-	for {
-		x, err = readFloat("Введите координату X:")
-		if err == nil {
-			break
-		} else {
-			fmt.Println("Некорректное значение")
-		}
+
+	questions := []string{
+		"Введите координату X:",
+		"Введите координату Y:",
+		"Введитe радиус R:",
 	}
-	for {
-		y, err = readFloat("Введите координату Y:")
-		if err == nil {
-			break
-		} else {
-			fmt.Println("Некорректное значение")
-		}
-	}
-	for {
-		r, err = readFloat("Введитe радиус R:")
-		if err == nil {
-			break
-		} else {
-			fmt.Println("Некорректное значение")
+
+	for index, r := range []*float64{&x, &y, &r} {
+		for {
+			*r, err = readFloat(questions[index])
+			if err == nil {
+				break
+			} else {
+				fmt.Println("Некорректное значение")
+			}
 		}
 	}
 	if beBelong(x, y, r) == false {
